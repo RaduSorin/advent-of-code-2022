@@ -7,7 +7,7 @@ let secondLine = [];
 let thirdLine = [];
 const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-const allFileContents = fs.readFileSync('C:/Work/readText/p3Input.txt', 'utf-8');
+const allFileContents = fs.readFileSync('./puzzle#3/p3Input.txt', 'utf-8');
 allFileContents.split(/\r?\n/).forEach(line => {
 
     arrayOfLines.push(line)

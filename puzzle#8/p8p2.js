@@ -6,7 +6,7 @@ let right = [];
 let up = [];
 let down = [];
 
-const allFileContents = fs.readFileSync('C:/Work/readText/p8Input.txt', 'utf-8');
+const allFileContents = fs.readFileSync('./puzzle#8/p8Input.txt', 'utf-8');
 allFileContents.split(/\r?\n/).forEach(line => {
     document.push(line);
 });

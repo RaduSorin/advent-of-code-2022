@@ -1,7 +1,7 @@
 const fs = require('fs');
 let numberOfIntervals = 0;
 
-const allFileContents = fs.readFileSync('C:/Work/readText/p4Input.txt', 'utf-8');
+const allFileContents = fs.readFileSync('./puzzle#4/p4Input.txt', 'utf-8');
 allFileContents.split(/\r?\n/).forEach(line => {
 
     let firstInterval = [];
@@ -26,28 +26,15 @@ allFileContents.split(/\r?\n/).forEach(line => {
         secondInterval.push(j.toString())
     }
 
-    function performIntersection(arr1, arr2) {
+    const firstToSecond = firstInterval.every(element => {
+        return secondInterval.includes(element);
+    });
 
-        const setA = new Set(arr1);
-        const setB = new Set(arr2);
+    const secondToFirst = secondInterval.every(element => {
+        return firstInterval.includes(element);
+    });
 
-        let intersectionResult = [];
-
-        for (let i of setB) {
-
-            if (setA.has(i)) {
-                intersectionResult.push(i);
-            }
-
-        }
-
-        return intersectionResult;
-
-    }
-
-    let intersection = performIntersection(firstInterval, secondInterval)
-
-    if (intersection.length != 0) {
+    if (firstToSecond || secondToFirst) {
         numberOfIntervals++
     }
 

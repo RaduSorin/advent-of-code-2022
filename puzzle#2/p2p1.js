@@ -3,7 +3,7 @@ let inputArr = [];
 let roundScores = [];
 var score;
 
-fs.readFile('C:/Work/readText/p2Input.txt', 'utf8', (err, input) => {
+fs.readFile('./puzzle#2/p2Input.txt', 'utf8', (err, input) => {
     if (err) {
         console.error(err);
         return;

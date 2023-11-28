@@ -2,7 +2,7 @@ const fs = require('fs');
 let sequence = [];
 let elementsEliminated = 0;
 
-const allFileContents = fs.readFileSync('C:/Work/readText/p6Input.txt', 'utf-8');
+const allFileContents = fs.readFileSync('./puzzle#6/p6Input.txt', 'utf-8');
 allFileContents.split(/\r?\n/).forEach(line => {
 
     for (var i = 0; i < line.length; i++) {

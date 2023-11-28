@@ -23,7 +23,7 @@ var containers = {
     9: nineContainer
 }
 
-const allFileContents = fs.readFileSync('C:/Work/readText/p5Input.txt', 'utf-8');
+const allFileContents = fs.readFileSync('./puzzle#5/p5Input.txt', 'utf-8');
 allFileContents.split(/\r?\n/).forEach(line => {
     document.push(line);
 
@@ -92,7 +92,7 @@ instructions.forEach((instruction) => {
         transferElements.push(containers[containerToRemoveNr][i])
     }
 
-    containers[containerToAddNr] = transferElements.reverse().concat(containers[containerToAddNr]);
+    containers[containerToAddNr] = transferElements.concat(containers[containerToAddNr]);
     containers[containerToRemoveNr] = containers[containerToRemoveNr].slice(transferElements.length);
 
 })
